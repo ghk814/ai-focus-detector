@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>분석 결과</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Noto Sans KR', sans-serif;
+      background: linear-gradient(180deg, #f9fafb 0%, #eef2f7 100%);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    h2 {
+      margin-top: 50px;
+      color: #ff9b26;
+      font-size: 2rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .result-box {
+      margin-top: 30px;
+      background: white;
+      border-radius: 15px;
+      display: inline-block;
+      padding: 30px 40px;
+      text-align: left;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      font-size: 17px;
+    }
+    .result-box p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    img {
+      max-width: 320px;
+      border-radius: 12px;
+      border: 3px solid #ddd;
+      margin-top: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    .link-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 28px;
+      background-color: #1a73e8;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      box-shadow: 0 4px 10px rgba(26, 115, 232, 0.3);
+      transition: all 0.3s ease;
+    }
+    .link-button:hover {
+      background-color: #1558b0;
+      box-shadow: 0 6px 15px rgba(21, 88, 176, 0.4);
+      transform: translateY(-2px);
+    }
+    footer {
+      margin-top: 60px;
+      color: #999;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>AI 집중도 분석 결과</h2>
+  <img src="{{ image_path }}" alt="업로드 이미지"><br>
+
+  <div class="result-box">
+    <p><strong>성별:</strong> {{ gender }}</p>
+    <p><strong>감정:</strong> {{ emotion }}</p>
+    <p><strong>집중도:</strong> {{ focus }}%</p>
+    <p><strong>상태 판단:</strong> {{ status }}</p>
+    <p><strong>분석 시각:</strong> {{ time }}</p>
+  </div>
+
+  <br>
+  <a href="/" class="link-button">📁 다시 분석하기</a>
+
+  <footer>
+    <p>© 2025 AI Focus Detector | DeepFace + Flask</p>
+  </footer>
+</body>
+</html>
