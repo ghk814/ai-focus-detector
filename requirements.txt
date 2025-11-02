@@ -1,0 +1,8 @@
+flask==3.1.2
+deepface==0.0.95
+opencv-python==4.9.0.80
+tensorflow-cpu==2.19.0
+tf-keras==2.19.0
+pandas==2.2.2
+numpy==1.26.4
+matplotlib==3.10.7
